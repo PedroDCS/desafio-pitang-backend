@@ -1,10 +1,11 @@
 {
-  "name": "@monorepo/desafio-pitang-backend",
+  "name": "desafio-pitang-backend",
   "version": "1.0.0",
   "main": "src/index.js",
   "repository": "https://gitlab.com/pedrodcs/desafio-pitang-backend.git",
   "author": "Pedro Daniel Camargos Soares <48827474+PedroDCS@users.noreply.github.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js"
