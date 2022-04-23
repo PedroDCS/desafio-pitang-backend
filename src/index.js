@@ -6,6 +6,7 @@ import mongoose from 'mongoose'
 
 import helmet from 'helmet'
 import router from './routers/router.js'
+import AuthMiddleware from './middleware/auth.middleware.js'
 
 dotenv.config()
 const { DATABASE_URL, PORT } = process.env
@@ -24,11 +25,9 @@ app.use(helmet())
 app.use(express.json())
 app.use(cors())
 
-app.use('/api', router)
+app.use(AuthMiddleware)
 
-app.get('/', (request, response) => {
-  response.json({ response: 'Working' })
-})
+app.use('/api', router)
 
 app.listen(PORT, () => {
   console.log(`server running PORT: ${PORT}`)

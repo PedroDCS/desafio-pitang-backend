@@ -43,7 +43,6 @@ class SchedulingController extends Controller {
     const { id } = request.params
 
     const today = moment(id).startOf('day')
-    console.log(today)
     try {
       const registries = await SchedulingModel.find({
         schedulingDate: {

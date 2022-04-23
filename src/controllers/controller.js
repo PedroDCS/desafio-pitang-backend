@@ -44,7 +44,7 @@ class Controller {
       }
       return response.json(registry)
     } catch (error) {
-      return response.json(error)
+      return response.status(400).json(error)
     }
   }
 
@@ -59,7 +59,7 @@ class Controller {
 
       return response.json({ message: 'Registry Removed' })
     } catch (error) {
-      return response.json(error)
+      return response.status(400).json(error)
     }
   }
 
@@ -72,7 +72,7 @@ class Controller {
       }
       return response.json(registry)
     } catch (error) {
-      return response.json(error)
+      return response.status(400).json(error)
     }
   }
 }
