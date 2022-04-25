@@ -51,45 +51,5 @@ class SchedulingController extends Controller {
       return response.status(400).json({ error: error })
     }
   }
-
-  async getHours(request, response) {
-    const { id } = request.params
-
-    /*
-const today = startOfHour(new Date(body.schedulingDate))
-    try {
-      const registries = await SchedulingModel.find({
-        schedulingDate: {
-          $gte: today,
-          $lte: endOfHour(new Date(body.schedulingDate))
-        }
-      })
-    */
-    const intervals = eachHourOfInterval({
-      start: startOfDay(new Date(id)),
-      end: endOfDay(new Date(id))
-    })
-    try {
-      let registers = []
-      for (let index = 0; index < intervals.length; index++) {
-        const registries = await SchedulingModel.find({
-          schedulingDate: {
-            $gte: startOfDay(new Date(id)),
-            $lte: endOfDay(new Date(id)),
-          }, schedulingDate: {
-            $gte: startOfHour(new Date(intervals[index])),
-            $lte: endOfHour(new Date(intervals[index])),
-          }
-        })
-        console.log(registries);
-      }
-
-
-
-      return response.json({ items: registries })
-    } catch (error) {
-      return response.status(400).json({ error: error })
-    }
-  }
 }
 export default SchedulingController
