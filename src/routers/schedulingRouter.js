@@ -6,6 +6,7 @@ const router = Router()
 const schedulingController = new Controller()
 
 router.get('/scheduling/getday/:id', schedulingController.getDay.bind(schedulingController))
+router.get('/scheduling/getHours/:id', schedulingController.getHours.bind(schedulingController))
 router.get('/scheduling', schedulingController.index.bind(schedulingController))
 router.post('/scheduling', schedulingController.store.bind(schedulingController))
 router.get('/scheduling/:id', schedulingController.getOne.bind(schedulingController))
