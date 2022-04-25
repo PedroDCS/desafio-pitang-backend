@@ -1,20 +1,26 @@
 {
-  "name": "@monorepo/desafio-pitang-backend",
+  "name": "desafio-pitang-backend",
   "version": "1.0.0",
   "main": "src/index.js",
   "repository": "https://gitlab.com/pedrodcs/desafio-pitang-backend.git",
   "author": "Pedro Daniel Camargos Soares <48827474+PedroDCS@users.noreply.github.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
+    "date-fns": "^2.28.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "helmet": "^5.0.2",
     "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.3",
+    "mongoose": "^6.3.0",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
