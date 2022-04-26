@@ -16,10 +16,10 @@ Criar uma API que ira receber os dados do frontend e armazenalos no banco de dad
 - tratamento de erros
 
 ### Bibliotecas usadas
-bcryptjs : usada para criptografar as senhas do usuario
-cors : usada para as requicisoes 
-date-fns : usada no tratamento de datas
-dotenv : usada para carregar variaveis de ambiente
-express : usada como o core da apliação, 
-joi : usada para validação de dados
-mongoose : usada para cominicar com o banco de dados
+- bcryptjs : usada para criptografar as senhas do usuario
+- cors : usada para as requicisoes 
+- date-fns : usada no tratamento de datas
+- dotenv : usada para carregar variaveis de ambiente
+- express : usada como o core da apliação, 
+- joi : usada para validação de dados
+- mongoose : usada para cominicar com o banco de dados
